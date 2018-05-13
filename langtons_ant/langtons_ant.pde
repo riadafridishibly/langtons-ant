@@ -6,7 +6,7 @@ void setup() {
   //fullScreen(P2D);
   ant = new LangtonsAnt();
   //noLoop();
-  //frameRate(15);
+  frameRate(1);
   noStroke();
 }
 
@@ -36,15 +36,15 @@ class LangtonsAnt {
   final int ANTDOWN = 2;
   final int ANTLEFT = 3;
 
-  LangtonsAnt(int pos_x_, int pos_y_) {
-    pos_x = pos_x_;
-    pos_y = pos_y_;
-
+  LangtonsAnt() {
     direction = ANTRIGHT;
 
     rows = width / cellSize;
     cols = height / cellSize;
-    
+
+    pos_x = cols / 2;
+    pos_y = rows / 2;
+
     cells = new Cell[rows][cols];
 
     for (int i = 0; i < rows; ++i) {
@@ -54,10 +54,6 @@ class LangtonsAnt {
       }
     }
     cells[pos_y][pos_x].setColor(color(0));
-  }
-
-  LangtonsAnt() {
-    this(width / (Cell.cellSize * 2), height / (Cell.cellSize * 2));
   }
 
   void update() {
