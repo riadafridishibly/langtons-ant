@@ -2,7 +2,7 @@ class Cell {
   private int x, y;
   private color clr = color(255);
 
-  final public static int cellSize = 50;
+  final public static int cellSize = 10;
 
   Cell(int x_, int y_) {
     this.x = x_;

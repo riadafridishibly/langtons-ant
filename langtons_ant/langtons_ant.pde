@@ -6,7 +6,7 @@ void setup() {
   //fullScreen(P2D);
   ant = new LangtonsAnt();
   //noLoop();
-  frameRate(1);
+  // frameRate(1);
   noStroke();
 }
 
